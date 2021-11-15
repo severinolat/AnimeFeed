@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:id="@+id/productimage"
+                android:layout_width="match_parent"
+                android:layout_height="379dp"
+                android:elevation="4dp"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/img_anime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/animeRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productimage"
+                android:background="#fff"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <RatingBar
+                    android:id="@+id/myRatingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text="@string/episodes"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txt_episode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_type"
+                android:layout_below="@+id/animeRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtext"
+                android:paddingBottom="3dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="2dp"
+                android:textColor="#f6464d"
+                android:textSize="11dp" />
+
+            <LinearLayout
+
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_type"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtSynopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:text="Women's running shoes"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_favorite_white_18"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
